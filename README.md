@@ -7,7 +7,7 @@
 Install with [npm](https://www.npmjs.org)
 
 ```
-npm install --save-dev gulp-eco
+npm install --save-dev https://github.com/DrA1ex/gulp-eco.git
 ```
 
 
