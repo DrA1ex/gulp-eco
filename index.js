@@ -15,8 +15,8 @@ module.exports = function (opt) {
       return callback();
     }
 
-    JSTpath = path.dirname(file.path) + '/' + path.basename(file.path, '.eco');
-    var re = new RegExp('.*\/' + opt.basePath + '\/?');  // match basePath + optional path separator
+    JSTpath = path.dirname(file.path).replace(/\\/g, "/") + '/' + path.basename(file.path, '.eco');
+    var re = new RegExp('.*/' + opt.basePath.replace(/\\/g, "/") + '/?');  // match basePath + optional path separator
     JSTpath = JSTpath.replace(re, '');
 
     var str = file.contents.toString();
